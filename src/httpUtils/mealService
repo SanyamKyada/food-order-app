@@ -1,0 +1,16 @@
+const fetchMeals = async () => {
+  try {
+    const response = await fetch("http://localhost:3000/meals");
+
+    if (!response.ok) {
+    }
+
+    const data = await response.json();
+    return data;
+    // setMeals(data);
+  } catch (error) {
+    console.error("error fetching meals:", error);
+  }
+};
+
+export { fetchMeals };
